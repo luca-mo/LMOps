@@ -1,2 +1,8 @@
 expt1
 time python main.py --task bullying --prompts prompts/bullying.md --data_dir data/bullying --out expts/bullying_results1 --evaluator ucb --max_threads 8
+
+expt2
+time python main.py --task bullying --prompts prompts/bullying.md --data_dir data/bullying --out expts/bullying_results2 --evaluator ucb --max_threads 8 --temperature 1.0
+
+expt3
+time python main.py --task bullying --prompts prompts/bullying.md --data_dir data/bullying --out expts/bullying_results3 --evaluator ucb --max_threads 8
