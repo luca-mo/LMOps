@@ -21,6 +21,8 @@ def get_task_class(task_name):
         return tasks.DefaultHFBinaryTask
     elif task_name == 'ar_sarcasm':
         return tasks.DefaultHFBinaryTask
+    elif task_name == 'bullying':
+        return tasks.DefaultHFBinaryTask
     else:
         raise Exception(f'Unsupported task: {task_name}')
 

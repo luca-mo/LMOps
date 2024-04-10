@@ -1,4 +1,3 @@
+import os
 
-OPENAI_KEY = "YOUR KEY"
-
-
+OPENAI_KEY = os.getenv('OPENAI_KEY')
