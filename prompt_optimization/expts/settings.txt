@@ -9,3 +9,8 @@ time python main.py --task bullying --prompts prompts/bullying.md --data_dir dat
 
 expt4
 time python main.py --task bullying --prompts prompts/bullying.md --data_dir data/bullying --out expts/bullying_results4 --evaluator ucb --max_threads 8
+
+# Reshuffled and extended dataset from 1000 of each class to 7820
+
+expt5
+time python main.py --task bullying --prompts prompts/bullying.md --data_dir data/bullying --out expts/bullying_results5 --evaluator ucb --max_threads 8
