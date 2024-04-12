@@ -14,3 +14,6 @@ time python main.py --task bullying --prompts prompts/bullying.md --data_dir dat
 
 expt5
 time python main.py --task bullying --prompts prompts/bullying.md --data_dir data/bullying --out expts/bullying_results5 --evaluator ucb --max_threads 8
+
+expt6
+time python main.py --task bullying --prompts prompts/bullying.md --data_dir data/bullying --out expts/bullying_results6 --evaluator ucb --max_threads 8
