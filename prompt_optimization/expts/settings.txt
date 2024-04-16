@@ -17,3 +17,8 @@ time python main.py --task bullying --prompts prompts/bullying.md --data_dir dat
 
 expt6
 time python main.py --task bullying --prompts prompts/bullying.md --data_dir data/bullying --out expts/bullying_results6 --evaluator ucb --max_threads 8
+
+# Changed naming of prompt files, bullying.md from now on bullying1.md
+
+expt7
+time python main.py --task bullying --prompts prompts/bullying1.md --data_dir data/bullying --out expts/bullying_results7 --evaluator ucb --max_threads 8
