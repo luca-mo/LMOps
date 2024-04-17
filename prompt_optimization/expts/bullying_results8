@@ -1,0 +1,36 @@
+{"task": "bullying", "data_dir": "data/bullying", "prompts": "prompts/bullying2.md", "out": "expts/bullying_results8", "max_threads": 8, "temperature": 0.0, "optimizer": "nl-gradient", "rounds": 6, "beam_size": 4, "n_test_exs": 400, "minibatch_size": 64, "n_gradients": 4, "errors_per_gradient": 4, "gradients_per_error": 1, "steps_per_gradient": 1, "mc_samples_per_step": 2, "max_expansion_factor": 8, "engine": "chatgpt", "evaluator": "ucb", "scorer": "01", "eval_rounds": 8, "eval_prompts_per_round": 8, "samples_per_eval": 32, "c": 1.0, "knn_k": 2, "knn_t": 0.993, "reject_on_errors": false, "eval_budget": 2048}
+======== ROUND 0
+8.916854858398438e-05
+('# Task\nDoes this tweet intend to harm or humiliate someone through its content?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:',)
+(1.0,)
+[0.64]
+======== ROUND 1
+161.73027300834656
+('# Task\nDoes this tweet contain any content that could be harmful or hurtful towards individuals or groups of people?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any derogatory, offensive, or discriminatory language or content towards a specific group of people in this tweet?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs the content of this tweet possibly damaging or negative towards a particular group or individual?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nDoes this tweet have the potential to cause harm or hurt feelings to any individual or group of people?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.671875, 0.66796875, 0.66796875, 0.66796875)
+[0.7025, 0.6875, 0.6925, 0.6925]
+======== ROUND 2
+218.90400195121765
+('# Task\nIs there language or content in this tweet that may be harmful or offensive towards a particular group or individual?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs the language or content of this tweet potentially offensive or hurtful to any individual or group of people?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nCould the message in this tweet potentially harm or portray a negative image of a specific group or individual?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nDoes this tweet contain any content that promotes violence, harassment, or discrimination towards individuals or groups of people?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.7916666666666666, 0.7916666666666666, 0.78125, 0.7708333333333334)
+[0.7125, 0.715, 0.6975, 0.625]
+======== ROUND 3
+265.69605708122253
+('# Task\nIs there language or content in this tweet that may be harmful or offensive towards a particular group or individual?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any content in this tweet that could be harmful, offensive, or disrespectful to individuals or groups of people?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs the language used in this tweet potentially harmful or offensive towards individuals or groups of people?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any language or content in this tweet that promotes stereotypes or discrimination against a particular group or individual?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.78125, 0.7604166666666666, 0.7604166666666666, 0.75)
+[0.7025, 0.7075, 0.7175, 0.7025]
+======== ROUND 4
+219.1593370437622
+('# Task\nIs there any language or imagery in this tweet that may be harmful, offensive, or disrespectful to individuals or groups of people?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nDoes this tweet contain any language or imagery that could be harmful or offensive to a specific group or individual?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nAre you able to recognize any possible harm or adverse effects on marginalized communities in this tweet?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nDoes the language used in this tweet show disrespect, prejudice, or provoke negative emotions towards individuals or groups of people?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.796875, 0.78125, 0.78125, 0.765625)
+[0.7125, 0.7075, 0.715, 0.71]
+======== ROUND 5
+195.80652499198914
+('# Task\nDoes the language or imagery in this tweet seem to be intended as harmful, offensive, or disrespectful towards individuals or groups of people? Please consider the tone and context of the tweet.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any language or imagery in this tweet that may be harmful, offensive, or disrespectful to individuals or groups of people?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nAre you able to recognize any possible harm or adverse effects on marginalized communities in this tweet?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any language or imagery in this tweet that may be discriminatory or derogatory towards a particular group based on race, gender, sexual orientation, or other protected characteristics?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.7916666666666666, 0.78125, 0.78125, 0.765625)
+[0.71, 0.705, 0.71, 0.7]
+======== ROUND 6
+224.89163494110107
+('# Task\nAre you able to recognize any possible harm or adverse effects on marginalized communities in this tweet?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any language or imagery in this tweet that may be discriminatory or derogatory towards a particular group based on race, gender, sexual orientation, or other protected characteristics?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any language or behavior in this tweet that could reinforce harmful stereotypes or discrimination against marginalized communities?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\n"Do you think this tweet could contribute to the reinforcement of negative stereotypes or biases against marginalized communities?"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.8125, 0.7916666666666666, 0.78125, 0.78125)
+[0.73, 0.7, 0.7125, 0.7025]
