@@ -1,0 +1,36 @@
+{"task": "toxic", "data_dir": "data/toxic", "prompts": "prompts/toxic1.md", "out": "expts/toxic/toxic_results1", "max_threads": 8, "temperature": 0.0, "optimizer": "nl-gradient", "rounds": 6, "beam_size": 4, "n_test_exs": 400, "minibatch_size": 64, "n_gradients": 4, "errors_per_gradient": 4, "gradients_per_error": 1, "steps_per_gradient": 1, "mc_samples_per_step": 2, "max_expansion_factor": 8, "engine": "chatgpt", "evaluator": "ucb", "scorer": "01", "eval_rounds": 8, "eval_prompts_per_round": 8, "samples_per_eval": 32, "c": 1.0, "knn_k": 2, "knn_t": 0.993, "reject_on_errors": false, "eval_budget": 2048}
+======== ROUND 0
+7.104873657226562e-05
+('# Task\nIs this comment toxic?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:',)
+(1.0,)
+[0.9075]
+======== ROUND 1
+162.14493107795715
+('# Task\nCould this comment be considered offensive or contain hurtful remarks?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\n"Does this comment contain offensive language or personal attacks?"\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nDoes this comment contain offensive language or personal attacks?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nCould this comment be considered toxic?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.9140625, 0.89453125, 0.890625, 0.890625)
+[0.93, 0.9375, 0.9225, 0.925]
+======== ROUND 2
+206.48572325706482
+('# Task\nIs there any use of derogatory language or personal insults in this comment?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nDoes this comment use language that is disrespectful or inflammatory towards others?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nDoes this comment contain any hostile language or personal insults?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nAre there any instances of derogatory language or personal insults in this comment?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.953125, 0.953125, 0.953125, 0.953125)
+[0.945, 0.93, 0.9325, 0.94]
+======== ROUND 3
+255.16597485542297
+('# Task\nIs there any explicit derogatory language or personal attacks directed towards a specific individual or group in the comment?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nDoes the comment contain any language that may be considered derogatory, insulting, or offensive?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nAre there any instances of derogatory language or personal insults in this comment?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any language in this comment that could be considered disrespectful or offensive towards others?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.96875, 0.96875, 0.96875, 0.953125)
+[0.925, 0.9425, 0.94, 0.94]
+======== ROUND 4
+232.09955096244812
+('# Task\nIs there any language in this comment that could be considered disrespectful or offensive towards specific groups or individuals?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any language in this comment that could be considered disrespectful or offensive towards others?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nDoes the comment contain any language that could be considered offensive, disrespectful, or harmful towards a specific individual or group?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any language in the comment that could be considered derogatory, insulting, or offensive?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.953125, 0.953125, 0.953125, 0.9375)
+[0.9475, 0.93, 0.9375, 0.9275]
+======== ROUND 5
+249.38858294487
+('# Task\nDetect any language containing personal attacks, hate speech, or discriminatory remarks in the comment.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nAre there any words in the comment that could be seen as disrespectful, offensive, or hurtful towards a particular person or group?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any derogatory language or personal attacks towards individuals or groups in the comment?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nAre there any words in this comment that may be seen as disrespectful, offensive, or inappropriate towards others?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.96875, 0.96875, 0.9583333333333334, 0.9479166666666666)
+[0.905, 0.94, 0.9225, 0.93]
+======== ROUND 6
+229.54170393943787
+('# Task\nIs there any language in this comment that is derogatory or discriminatory and could be considered offensive to others?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any language in the comment that may be offensive or disrespectful to individuals or groups?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any language in the comment that may be considered disrespectful, offensive, or hurtful towards a specific individual or group?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:', '# Task\nIs there any derogatory language or personal attacks towards individuals or groups in the comment?\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:')
+(0.953125, 0.953125, 0.953125, 0.953125)
+[0.93, 0.9275, 0.9225, 0.9325]
