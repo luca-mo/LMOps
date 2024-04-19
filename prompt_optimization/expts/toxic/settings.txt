@@ -1,0 +1,2 @@
+expt1
+time python main.py --task toxic --prompts prompts/toxic1.md --data_dir data/toxic --out expts/toxic/toxic_results1 --evaluator ucb --max_threads 8
