@@ -64,16 +64,16 @@ def get_args():
 
     parser.add_argument('--optimizer', default='nl-gradient')
     parser.add_argument('--rounds', default=6, type=int)
-    parser.add_argument('--beam_size', default=4, type=int)
-    parser.add_argument('--n_test_exs', default=400, type=int)
+    parser.add_argument('--beam_size', default=4, type=int) # Only the top n prompt variation sare retained
+    parser.add_argument('--n_test_exs', default=400, type=int) # Prompt is tested on n examples of the test set
 
-    parser.add_argument('--minibatch_size', default=64, type=int)
-    parser.add_argument('--n_gradients', default=4, type=int)
-    parser.add_argument('--errors_per_gradient', default=4, type=int)
-    parser.add_argument('--gradients_per_error', default=1, type=int)
-    parser.add_argument('--steps_per_gradient', default=1, type=int)
-    parser.add_argument('--mc_samples_per_step', default=2, type=int)
-    parser.add_argument('--max_expansion_factor', default=8, type=int)
+    parser.add_argument('--minibatch_size', default=64, type=int) # Samples n examples from the training set without replacement
+    parser.add_argument('--n_gradients', default=4, type=int) # For each minibatch the optimizer generates n feedbacks
+    parser.add_argument('--errors_per_gradient', default=4, type=int) # Select up to n false predictions from the minibatch
+    parser.add_argument('--gradients_per_error', default=1, type=int) # Each error sampled will result in one feedback point
+    parser.add_argument('--steps_per_gradient', default=1, type=int) # For each feedback on an error, n new variations are produced
+    parser.add_argument('--mc_samples_per_step', default=2, type=int) # For each modified prompt, the optimizer generates n new variations
+    parser.add_argument('--max_expansion_factor', default=8, type=int) # No more than n new prompts will be retained after each round
 
     parser.add_argument('--engine', default="chatgpt", type=str)
 
@@ -86,8 +86,8 @@ def get_args():
     parser.add_argument('--c', default=1.0, type=float, help='exploration param for UCB. higher = more exploration')
     parser.add_argument('--knn_k', default=2, type=int)
     parser.add_argument('--knn_t', default=0.993, type=float)
-    parser.add_argument('--reject_on_errors', action='store_true') 
-    
+    parser.add_argument('--reject_on_errors', action='store_true')
+
     args = parser.parse_args()
 
     return args
@@ -99,7 +99,7 @@ if __name__ == '__main__':
     config = vars(args)
 
     config['eval_budget'] = config['samples_per_eval'] * config['eval_rounds'] * config['eval_prompts_per_round']
-    
+
     task = get_task_class(args.task)(args.data_dir, args.max_threads)
     scorer = get_scorer(args.scorer)()
     evaluator = get_evaluator(args.evaluator)(config)
@@ -148,7 +148,7 @@ if __name__ == '__main__':
         for candidate, score in zip(candidates, scores):
             f1, texts, labels, preds = task.evaluate(gpt4, candidate, test_exs, n=args.n_test_exs)
             metrics.append(f1)
-        with open(args.out, 'a') as outf:  
+        with open(args.out, 'a') as outf:
             outf.write(f'{metrics}\n')
 
     print("DONE!")
