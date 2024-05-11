@@ -3,3 +3,6 @@ time python main.py --task toxic --prompts prompts/toxic1.md --data_dir data/tox
 
 expt2
 time python main.py --task toxic --prompts prompts/toxic1.md --data_dir data/toxic --out expts/toxic/toxic_results2 --evaluator ucb --max_threads 8 --rounds 0
+
+expt3
+time python main.py --task toxic --prompts prompts/toxic1.md --data_dir data/toxic --out expts/toxic/toxic_results3 --evaluator ucb --max_threads 8 --c 2.0
