@@ -1,0 +1,6 @@
+{"task": "toxic", "data_dir": "data/toxic", "prompts": "prompts/toxic5.md", "out": "expts/toxic/toxic_results20", "max_threads": 8, "temperature": 0.0, "optimizer": "nl-gradient", "rounds": 0, "beam_size": 4, "n_test_exs": 150, "minibatch_size": 64, "n_gradients": 4, "errors_per_gradient": 4, "gradients_per_error": 1, "steps_per_gradient": 1, "mc_samples_per_step": 2, "max_expansion_factor": 8, "engine": "chatgpt", "evaluator": "ucb", "scorer": "01", "eval_rounds": 8, "eval_prompts_per_round": 8, "samples_per_eval": 50, "c": 2.0, "knn_k": 2, "knn_t": 0.993, "reject_on_errors": false, "eval_budget": 3200}
+======== ROUND 0
+6.175041198730469e-05
+("# Task\nLet's think step by step. First, carefully read the following comment. Identify any words, phrases, or overall tone that could be perceived as toxic, such as insults, threats, or offensive language. For each identified element, explain why it might be harmful or offensive. Finally, based on these observations, conclude whether the comment is toxic.\n\n# Output format\nAnswer Yes or No as labels\n\n# Prediction\nText: {{ text }}\nLabel:",)
+(1.0,)
+[0.7666666666666667]
